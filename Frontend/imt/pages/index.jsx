@@ -23,10 +23,13 @@ const Search=(e)=>{
     setFind(e.target.value)
 }
    const SearchBtn=async()=>{
-    const get=await fetch(`http://localhost:8080/blogs?title=${find}`)
-    const res=await get.json()
-    setSearchData(res)
-    setShow(false)
+    if(find){
+        const get=await fetch(`http://localhost:8080/blogs?title=${find}`)
+        const res=await get.json()
+        setSearchData(res)
+        setShow(false)
+
+    }else setShow(true)
 
 
    }
@@ -40,7 +43,36 @@ const Search=(e)=>{
         <h3 style={{textAlign:"center"}}>Home page</h3>
         <br/>
         <br/>
-{show==true?
+{show==false?
+
+    <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",
+    border:"3px solid green",width:"70%",margin:"auto"
+    }}>
+    <h4 style={{textAlign:"center"}}>Search Result:</h4>
+    
+        {searchData?searchData.map((el)=>
+        <div onClick={()=>Singlepage(el._id)} style={{border:"2px dotted black",margin:"auto",
+        margin:"50px",textAlign:"center",borderRadius:"18px"
+    
+    
+    
+    }} key={el._id}>
+        <h2>{el.title}</h2>
+        <h5>{el.author}</h5>
+        
+        </div>
+    
+    
+    ):<h1>Loading</h1>}
+    
+    </div>:null
+
+
+}
+
+
+
+
     <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",
     border:"3px solid green",width:"70%",margin:"auto"
     }}>
@@ -60,31 +92,12 @@ const Search=(e)=>{
     
     ):<h1>Loading</h1>}
     
-    </div>:
-
-    <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",
-border:"3px solid green",width:"70%",margin:"auto"
-}}>
-
-    {searchData?searchData.map((el)=>
-    <div onClick={()=>Singlepage(el._id)} style={{border:"2px dotted black",margin:"auto",
-    margin:"50px",textAlign:"center",borderRadius:"18px"
-
-
-
-}} key={el._id}>
-    <h2>{el.title}</h2>
-    <h5>{el.author}</h5>
-    
     </div>
 
-
-):<h1>Loading</h1>}
-
-</div>
+    
 
 
-}
+
         
         
         </div>

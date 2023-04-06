@@ -2,7 +2,7 @@
 
 const mongoose=require('mongoose')
 
-const connection=mongoose.connect('mongodb://127.0.0.1:27017/IMT')
+const connection=mongoose.connect('mongodb+srv://shoebk478:shoeb@cluster0.lcrlhc2.mongodb.net/IMT?retryWrites=true&w=majority')
 
 
 module.exports={connection}

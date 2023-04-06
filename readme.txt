@@ -7,7 +7,7 @@ Database is hosted on MongoDBAtlas
 Backend server is running on PORT 8080
 Nodemon is used to run Backend server.
 To start backend ---  npm run start
-To run frontend  ---- npm run start
+To run frontend  ---- npm run dev
 
 
 

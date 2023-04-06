@@ -10,7 +10,7 @@ const Create=()=>{
  const {auth}=useContext(Context)
   const [cookies, setCookie] = useCookies(['user'])
 
-console.log(cookies)
+
   const PostData=async(data)=>{
     console.log(data)
 

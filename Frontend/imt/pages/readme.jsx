@@ -11,14 +11,14 @@ const ReadMe=()=>{
       <br/>
       <br/>
       <h3>Setup :</h3>
-      <p>
+      <div>
 
 <p>Database is hosted on MongoDB Atlas</p>
 <p>Backend server is running on PORT 8080</p>
 <p>Nodemon is used to run Backend server.</p>
 <p>To start backend ---  npm run start</p>
 <p>To run frontend  ---- npm run dev</p>
-    </p>  
+    </div>  
       
       
       <br/>
@@ -29,7 +29,7 @@ const ReadMe=()=>{
       The advanced blog application is a full-stack web application that allows registered users to create, edit, and delete blog posts. In this article, we will explore the various features of the application, including user authentication, encryption, and admin controls.
       </p>
       <h3>Features:</h3>
-      <p>
+      <div>
       <h5>1] Home Page:</h5>
       Home Page: The home page of the application displays all the blog posts, regardless of whether the user is registered or not. This page provides a quick overview of the latest blog posts and allows users to click on a post to view its details.
       <h5>2] Create Page: </h5>
@@ -46,7 +46,7 @@ const ReadMe=()=>{
       The admin login page is a separate page that allows the administrator to log in and access the admin control panel. Bcrypt is also used to encrypt the admin's password and store it in the database.
       <h5>8] Search Functionality:</h5>
       The home page includes a search functionality that allows anyone to search for a blog post by its title. This feature makes it easy for users to find the blog post they are looking for.
-      </p>
+      </div>
 
        
        
